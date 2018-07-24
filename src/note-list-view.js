@@ -5,9 +5,11 @@
   }
 
   NoteListView.prototype.returnHTML = function() {
+    this.htmlNotes = [];
     for (i = 0; i < this.noteList.notes.length; i++) {
-      var noteText = _getText(this.noteList.notes[i]);
+      var noteText = _shortenToTwentyChars(_getText(this.noteList.notes[i]));
       var htmlNote = _addHtmlTo(noteText);
+
       _storeIn(this.htmlNotes, htmlNote);
     }
     return _addListTags(_join(this.htmlNotes));
@@ -17,7 +19,14 @@
     return note.returnText();
   }
 
+  function _shortenToTwentyChars(note){
+    let outputNote = note;
+    if(note.length >= 20) outputNote = note.substring(0, 20);
+    return outputNote
+  }
+
   function _addHtmlTo(note) {
+
     return '<li><div>' + note + '</div></li>';
   }
 
