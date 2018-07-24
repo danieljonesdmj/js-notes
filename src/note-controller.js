@@ -8,7 +8,7 @@
   }
 
 NoteController.prototype.insertHTML = function () {
-  document.getElementById('app').innerHTML = this.noteListView.returnsHTML();
+  document.getElementById('app').innerHTML = this.noteListView.returnHTML();
   };
 
   var noteController = new NoteController(noteList);
