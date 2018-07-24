@@ -5,7 +5,7 @@
     var note1 = noteList.enterNote('First note');
     var note2 = noteList.enterNote('Second note');
 
-    if (noteListView.returnsHTML() !== '<ul><li><div>First note</div></li><li><div>Second note</div></li></ul>' ) {
+    if (noteListView.returnHTML() !== '<ul><li><div>First note</div></li><li><div>Second note</div></li></ul>' ) {
       throw new Error('Incorrect string');
     }
 
