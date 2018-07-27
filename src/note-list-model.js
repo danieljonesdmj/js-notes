@@ -4,7 +4,7 @@
    }
 
   NoteList.prototype.enterNote = function (text) {
-    note = new Note(text);
+    note = new Note(text, this.notes.length);
     this.notes.push(note);
   };
 

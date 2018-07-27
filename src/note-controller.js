@@ -1,5 +1,5 @@
 (function(exports) {
-  var noteList = new NoteList;
+  var noteList = new NoteList();
 
   function NoteController(noteList) {
     this.noteList = noteList;

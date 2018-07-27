@@ -20,9 +20,11 @@
   }
 
   function _shortenToTwentyChars(note){
-    let outputNote = note;
-    if(note.length >= 20) outputNote = note.substring(0, 20);
-    return outputNote
+    var Note = note;
+    if (note.length >= 20) {
+
+    Note = note.substring(0, 20);}
+    return Note;
   }
 
   function _addHtmlTo(note) {
